@@ -12,5 +12,4 @@ public interface Figure {
     // Nastavi poziciu
     void setPosition(int position);
 
-    int getStep();
 }

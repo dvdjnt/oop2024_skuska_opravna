@@ -1,25 +1,32 @@
 package sk.stuba.fei.uim.oop.figure;
 
-public class AbstractFigure implements Figure {
+abstract public class AbstractFigure implements Figure {
 
+    protected int position;
+    protected int step;
+
+    public AbstractFigure() {
+        this.position = 0;
+    }
 
     @Override
     public void move() {
-
+        position += step;
     }
 
     @Override
     public int getPosition() {
-        return 0;
+        return this.position;
     }
 
     @Override
     public void setPosition(int position) {
-
+        this.position = position;
     }
 
-    @Override
     public int getStep() {
-        return 0;
+        return this.step;
     }
+
+
 }

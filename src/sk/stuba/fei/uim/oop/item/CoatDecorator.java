@@ -1,14 +1,15 @@
 package sk.stuba.fei.uim.oop.item;
 
+import sk.stuba.fei.uim.oop.figure.AbstractFigure;
 import sk.stuba.fei.uim.oop.figure.Figure;
 
-public class CoatDecorator implements Figure {
+public class CoatDecorator extends AbstractFigure {
 
-    private Figure target;
+    private AbstractFigure target;
     private int boost;
 
     public CoatDecorator(Figure figure) {
-        this.target = figure;
+        this.target = (AbstractFigure) figure;
         this.boost = 3;
     }
 
